@@ -1,7 +1,6 @@
 package io.crunch.catalog;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "PRODUCT")
