@@ -94,6 +94,6 @@ VALUES (19, 'Raspberry Pi Zero 2 W', 'RP3A0', '512 MB',
         'The Raspberry Pi Zero 2 W, released in 2021, features a quad-core 1 GHz Cortex-A53 CPU, 512MB RAM, Wi-Fi, Bluetooth 4.2, mini HDMI, micro USB, and GPIO. It offers significant performance improvements while retaining the compact size, ideal for IoT and portable projects.');
 
 INSERT INTO product (id, model, processor, memory, image, quantity, status, description)
-VALUES (19, 'Raspberry Pi Zero 2 WH', 'RP3A0', '512 MB',
+VALUES (20, 'Raspberry Pi Zero 2 WH', 'RP3A0', '512 MB',
         'zero-2-wh.jpg', 10, 'INSTOCK',
         'The Raspberry Pi Zero 2 WH is a variant of the Zero 2 W with pre-soldered GPIO headers. It features a quad-core 1 GHz Cortex-A53 CPU, 512MB RAM, Wi-Fi, Bluetooth 4.2, mini HDMI, and micro USB, combining performance with ease of use for IoT and prototyping projects.');
