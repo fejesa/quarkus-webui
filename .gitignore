@@ -25,3 +25,8 @@ qodana.yaml
 
 # Plugin directory
 /.quarkus/cli/plugins/
+
+**/.angular
+**/node_modules
+**/.quinoa
+**/.editorconfig
