@@ -15,9 +15,7 @@
         <quarkus.platform.version>3.17.5</quarkus.platform.version>
         <osgi.annotation.version>2.0.0</osgi.annotation.version>
         <surefire-plugin.version>3.2.5</surefire-plugin.version>
-        <awaitility.version>4.2.2</awaitility.version>
         <assertj-core.version>3.26.3</assertj-core.version>
-        <pdfbox-tools.version>3.0.3</pdfbox-tools.version>
     </properties>
 
     <dependencyManagement>
@@ -41,17 +39,18 @@
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-rest-jackson</artifactId>
         </dependency>
+        <!-- Hibernate ORM specific dependencies -->
         <dependency>
             <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-hibernate-validator</artifactId>
+            <artifactId>quarkus-hibernate-orm-panache</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-jdbc-postgresql</artifactId>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-arc</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-scheduler</artifactId>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
@@ -70,22 +69,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.awaitility</groupId>
-            <artifactId>awaitility</artifactId>
-            <version>${awaitility.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
             <version>${assertj-core.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <!-- Used for generating fake pdf documents -->
-        <dependency>
-            <groupId>org.apache.pdfbox</groupId>
-            <artifactId>pdfbox-tools</artifactId>
-            <version>${pdfbox-tools.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -125,8 +111,6 @@
                         <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
                         <maven.home>${maven.home}</maven.home>
                     </systemPropertyVariables>
-                    <!-- Detect pinned thread in tests -->
-                    <argLine>-Djdk.tracePinnedThreads</argLine>
                 </configuration>
             </plugin>
             <plugin>
