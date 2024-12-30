@@ -13,6 +13,7 @@
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
         <quarkus.platform.version>3.17.5</quarkus.platform.version>
+        <quarkus-quinoa.version>2.5.1</quarkus-quinoa.version>
         <osgi.annotation.version>2.0.0</osgi.annotation.version>
         <surefire-plugin.version>3.2.5</surefire-plugin.version>
         <assertj-core.version>3.26.3</assertj-core.version>
@@ -57,6 +58,11 @@
             <artifactId>org.osgi.annotation.bundle</artifactId>
             <version>${osgi.annotation.version}</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkiverse.quinoa</groupId>
+            <artifactId>quarkus-quinoa</artifactId>
+            <version>${quarkus-quinoa.version}</version>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
