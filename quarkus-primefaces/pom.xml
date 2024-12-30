@@ -121,8 +121,6 @@
                         <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
                         <maven.home>${maven.home}</maven.home>
                     </systemPropertyVariables>
-                    <!-- Detect pinned thread in tests -->
-                    <argLine>-Djdk.tracePinnedThreads</argLine>
                 </configuration>
             </plugin>
             <plugin>
