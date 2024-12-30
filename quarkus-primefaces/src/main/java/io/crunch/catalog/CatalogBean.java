@@ -55,17 +55,17 @@ public class CatalogBean implements Serializable {
     /**
      * List of all products retrieved from the {@link ProductService}.
      */
-    private List<Product> products;
+    private transient List<Product> products;
 
     /**
      * List of filtered products for display in the UI.
      */
-    private List<Product> filteredProducts;
+    private transient List<Product> filteredProducts;
 
     /**
      * List of filter metadata for PrimeFaces data table filtering.
      */
-    private List<FilterMeta> filterBy;
+    private transient List<FilterMeta> filterBy;
 
     /**
      * Constructs a new {@code CatalogBean} with the specified {@link ProductService}.
