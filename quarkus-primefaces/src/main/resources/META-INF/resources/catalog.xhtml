@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:p="http://primefaces.org/ui"
+      lang="en">
+<h:head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <h:outputStylesheet name="css/layout.css"/>
+    <f:loadBundle basename="MessageResources" var="msg"/>
+</h:head>
+<h:body>
+    <div class="main">
+        <div class="content">
+            <span class="title">#{msg['catalogTitle']}</span>
+            <h:form>
+                <div class="content-input">
+                    <p:dataTable id="productList" var="product"
+                                 value="#{catalogBean.products}"
+                                 filteredValue="#{catalogBean.filteredProducts}" filterBy="#{catalogBean.filterBy}"
+                                 rows="5" paginator="true"
+                                 rowsPerPageTemplate="5,10"
+                                 paginatorTemplate="{FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                                 paginatorPosition="bottom" paginatorAlwaysVisible="true"
+                                 stripedRows="true" size="small"
+                                 emptyMessage="#{msg['noRecords']}">
+                        <p:column field="model" headerText="#{msg['modelHeader']}" filterBy="#{product.model}" sortBy="#{product.model}" filterMatchMode="contains">
+                            <h:outputText id="model" value="#{product.model}"/>
+                        </p:column>
+                        <p:column field="image" headerText="#{msg['imageHeader']}" sortable="false" filterable="false">
+                            <p:graphicImage id="productImage" name="images/#{product.image}" styleClass="product-image" />
+                            <p:tooltip for="productImage" value="#{product.description}" position="right"/>
+                        </p:column>
+                        <p:column field="processor" headerText="#{msg['processorHeader']}" filterBy="#{product.processor}" sortBy="#{product.processor}">
+                            <h:outputText id="processor" value="#{product.processor}"/>
+                        </p:column>
+                        <p:column field="memory" headerText="#{msg['memoryHeader']}" filterBy="#{product.memory}" sortOrder="asc">
+                            <h:outputText id="memory" value="#{product.memory}"/>
+                        </p:column>
+                        <p:column field="quantity" headerText="#{msg['quantityHeader']}" filterable="false">
+                            <h:outputText id="quantity" value="#{product.quantity}"/>
+                        </p:column>
+                        <p:column field="status" headerText="#{msg['statusHeader']}" filterable="false">
+                            <span class="product-badge status-#{product.status.name().toLowerCase()}">#{product.status}</span>
+                        </p:column>
+                    </p:dataTable>
+                </div>
+            </h:form>
+        </div>
+    </div>
+</h:body>
+</html>
