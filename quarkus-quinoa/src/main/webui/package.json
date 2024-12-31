@@ -4,9 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "dev": "orval --config ./orval.config.ts && ng",
+    "build": "orval --config ./orval.config.ts && ng build"
   },
   "private": true,
   "dependencies": {
@@ -35,6 +36,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "orval": "^7.3.0",
     "typescript": "~5.6.2"
   }
 }

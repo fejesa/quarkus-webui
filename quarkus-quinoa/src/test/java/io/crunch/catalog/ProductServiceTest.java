@@ -10,13 +10,13 @@ import java.util.Objects;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @QuarkusTest
-public class ProductServiceTest {
+class ProductServiceTest {
 
     @Inject
     ProductService productService;
 
     @Test
-    public void shouldReturnAllProducts() {
+    void shouldReturnAllProducts() {
         var products = productService.getProducts();
         assertThat(products).isNotNull();
         assertThat(products.size()).isPositive();
