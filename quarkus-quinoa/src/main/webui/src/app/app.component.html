@@ -2,7 +2,7 @@
   <div class="content">
     <span class="title">Raspberry Pi Catalog</span>
     <div class="content-input">
-      <p-table [value]="products"  [paginator]="true"
+      <p-table [value]="products" [paginator]="true"
                [rows]="5"
                [rowsPerPageOptions]="[5, 10]"
                sortMode="multiple"
@@ -26,6 +26,11 @@
             <td>{{ product.memory }}</td>
             <td>{{ product.quantity }}</td>
             <td><span [class]="'product-badge status-' +product.status.toLowerCase()">{{product.status}}</span></td>
+          </tr>
+        </ng-template>
+        <ng-template #emptymessage>
+          <tr>
+            <td colspan="5">No model found with given criteria.</td>
           </tr>
         </ng-template>
       </p-table>
