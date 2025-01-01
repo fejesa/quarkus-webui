@@ -1,7 +1,8 @@
 package io.crunch.catalog;
+
 import jakarta.annotation.PostConstruct;
 import jakarta.inject.Named;
-import org.omnifaces.cdi.ViewScoped;
+import jakarta.faces.view.ViewScoped;
 import org.primefaces.model.FilterMeta;
 
 import java.io.Serializable;
