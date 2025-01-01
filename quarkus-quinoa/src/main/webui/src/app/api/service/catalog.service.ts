@@ -60,7 +60,7 @@ export class QuarkusQuinoaAPIService {
      options?: HttpClientOptions
   ): Observable<TData>  {
     return this.http.get<TData>(
-      `http://localhost:8080/api/product`,options
+      `http://localhost:8081/api/product`,options
     );
   }
 
