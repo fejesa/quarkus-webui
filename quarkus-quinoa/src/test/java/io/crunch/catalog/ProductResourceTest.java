@@ -11,7 +11,7 @@ class ProductResourceTest {
     @Test
     void shouldReturnAllProducts() {
         given()
-          .when().get("/product")
+          .when().get("/api/product")
           .then()
              .statusCode(200);
     }
