@@ -31,4 +31,3 @@ qodana.yaml
 **/.quinoa
 **/.editorconfig
 **/webui/dist
-**/webui/api
