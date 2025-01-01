@@ -5,15 +5,9 @@ This project demonstrates the integration of Angular UI components in a [Quarkus
 ## Project Structure
 ### Backend
 Key Components of the Backend
-* `ProductService`:
-  * An `@ApplicationScoped` bean responsible for providing a list of products.
-  * Interacts with a PostgreSQL database using the `PanacheRepository` interface.
-* REST API
-  * The backend exposes a REST API via the `ProductResource` class.
-  * This API allows the Angular frontend to consume backend services, as direct access is not possible.
-* Error Handling
-  * An `ExceptionMapper` handles requests for REST resources not exposed by the backend.
-  * Provides appropriate error responses to ensure graceful error management.
+* `ProductService`: An `@ApplicationScoped` bean responsible for providing a list of products. It interacts with the database using the `PanacheRepository` interface.
+* REST API: The backend exposes a REST API via the `ProductResource` class. This API allows the Angular frontend to consume backend services, as direct access is not possible.
+* Error Handling: An `ExceptionMapper` handles requests for REST resources not exposed by the backend. Provides appropriate error responses to ensure graceful error management.
 
 ### Frontend
 The frontend is implemented in the `src/main/webui` folder using Angular. The application is built with the Angular CLI and incorporates the [PrimeNG](https://primeng.org/) library for UI components. It is served by the [Quinoa Quarkus](https://github.com/quarkiverse/quarkus-quinoa) extension.

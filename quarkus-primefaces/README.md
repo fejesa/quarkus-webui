@@ -5,7 +5,7 @@ This project demonstrates how to use [PrimeFaces](https://www.primefaces.org/) U
 ## Project Structure
 ### Backend
 * The backend is represented by `ProductService`, an `@ApplicationScoped` bean that provides a list of products.
-* It uses the PanacheRepository to interact with the PostgreSQL database.
+* It uses the `PanacheRepository` to interact with the database.
 
 ### Frontend
 * The frontend is a single page where products are displayed in a [DataTable](https://www.primefaces.org/showcase/ui/data/datatable/filter.xhtml) component. Users can filter and sort the products by different columns.
