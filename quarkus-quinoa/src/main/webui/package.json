@@ -1,11 +1,19 @@
 {
   "name": "primebox",
   "version": "0.0.0",
+  "_comments": {
+    "scripts": {
+      "start": "Starts the Angular development server",
+      "watch": "Builds the project in watch mode with the development configuration",
+      "dev": "Runs Orval (API generator) and then Angular CLI",
+      "build": "Runs Orval and then builds the project for production"
+    },
+    "dependencies": "Main dependencies required for the application to run",
+    "devDependencies": "Development tools and libraries for building and testing the application"
+  },
   "scripts": {
-    "ng": "ng",
     "start": "ng serve",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
     "dev": "orval --config ./orval.config.ts && ng",
     "build": "orval --config ./orval.config.ts && ng build"
   },
