@@ -3,7 +3,7 @@
 This project demonstrates the integration of Angular UI components in a [Quarkus](https://quarkus.io/) application using the [Quinoa](https://github.com/quarkiverse/quarkus-quinoa) extension. It is a Single Page Application (SPA) that displays a product catalog, leveraging Angular's UI components.
 
 ## Project Structure
-## Backend
+### Backend
 Key Components of the Backend
 * `ProductService`:
   * An `@ApplicationScoped` bean responsible for providing a list of products.
@@ -15,7 +15,7 @@ Key Components of the Backend
   * An `ExceptionMapper` handles requests for REST resources not exposed by the backend.
   * Provides appropriate error responses to ensure graceful error management.
 
-## Frontend
+### Frontend
 The frontend is implemented in the `src/main/webui` folder using Angular. The application is built with the Angular CLI and incorporates the [PrimeNG](https://primeng.org/) library for UI components. It is served by the [Quinoa Quarkus](https://github.com/quarkiverse/quarkus-quinoa) extension.
 The frontend consists of a single page displaying products in a PrimeNG [DataTable](https://primeng.org/table) component. Users can filter and sort products by various columns.
 
@@ -25,6 +25,13 @@ Key files:
 * `index.html`: Defines the overall structure and layout of the Angular application.
 
 **Note**: Model and service classes are generated from the OpenAPI specification, as defined in the `src/main/webui/api/catalog.yaml` file.
+
+### Database
+* The application uses PostgreSQL as its database.
+* Database connection properties are configured in the `application.properties` file.
+* During startup, the database is created and populated with sample products using the `import.sql` file.
+
+**Note:** Product images are stored in the `src/main/resources/META-INF/resources/images` folder for this demo. In a production environment, images should be stored in a more appropriate location, such as a dedicated file storage service or CDN.
 
 ## Requirements
 To build and run this project, you need the following tools:
