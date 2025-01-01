@@ -1,6 +1,6 @@
 # Quarkus PrimeFaces UI
 
-This project demonstrates how to use PrimeFaces UI components in a Quarkus application. It is a Single Page Application (SPA) that displays a catalog of products with PrimeFaces UI components.
+This project demonstrates how to use [PrimeFaces](https://www.primefaces.org/) UI components in a [Quarkus](https://quarkus.io/) application. It is a Single Page Application (SPA) that displays a catalog of products with PrimeFaces UI components.
 
 ## Project Structure
 ### Backend
@@ -8,7 +8,7 @@ This project demonstrates how to use PrimeFaces UI components in a Quarkus appli
 * It uses the PanacheRepository to interact with the PostgreSQL database.
 
 ### Frontend
-* The frontend is a single page where products are displayed in a `DataTable` component. Users can filter and sort the products by different columns.
+* The frontend is a single page where products are displayed in a [DataTable](https://www.primefaces.org/showcase/ui/data/datatable/filter.xhtml) component. Users can filter and sort the products by different columns.
 * The backing bean, `CatalogBean`, is a `@ViewScoped` bean that:
   * Holds the products and filters.
   * Handles user interactions such as filtering and sorting.
@@ -16,7 +16,7 @@ This project demonstrates how to use PrimeFaces UI components in a Quarkus appli
 
 ### Layout
 * The layout - `catalog.xhtml` - consists of a simple header and a content area, defined in an XHTML file.
-* Based on the PrimeFaces Quarkus extension, web resources are served from the `src/main/resources/META-INF/resources` folder.
+* Based on the [PrimeFaces Quarkus](https://github.com/quarkiverse/quarkus-primefaces) extension, web resources are served from the `src/main/resources/META-INF/resources` folder.
 * The `src/main/resources/META-INF/web.xml` file defines mappings between URL paths and the servlets handling requests.
 
 ### Database
