@@ -10,7 +10,6 @@ This is where [Quarkus](https://quarkus.io/) shines. Quarkus is more than just a
 
 In this article, I’ll demonstrate how you can build the same SPA using [Jakarta Server Faces](https://github.com/eclipse-ee4j/mojarra) (JSF) and [Angular](https://angular.dev/), both running on Quarkus. By comparing these two approaches, I hope to help you decide which stack best fits your requirements.
 
----
 ## Why Quarkus?
 Quarkus is a versatile framework that allows you to build a wide variety of applications, thanks to its robust extension mechanism. This mechanism distinguishes between Quarkus extensions and external libraries, enhancing the framework's functionality and performance.
 
@@ -23,7 +22,6 @@ Quarkus’s mission is to transform your entire application—including the libr
 ### Implicit and Explicit Extensions
 Certain extensions are added to your application implicitly based on the technologies you use. For instance, when developing a Jakarta Faces application, the [Undertow](https://undertow.io/) servlet container is included automatically as a runtime dependency. Additionally, for full-stack development using non-Java-based front-end technologies such as Angular, React, or Vue.js, Quarkus provides the [Quinoa](https://docs.quarkiverse.io/quarkus-quinoa/dev/index.html) extension. This extension facilitates the integration of modern front-end frameworks into your Quarkus-based application, allowing you to build robust full-stack solutions effortlessly.
 
----
 ## What Are Jakarta Server Faces and Angular?
 **Jakarta Server Faces (JSF)** is a server-side framework for building Java web applications using Server-Side Rendering (SSR). It processes UI components and application logic on the server, generating complete HTML responses for each client request. This approach ensures tight backend integration and simplifies handling complex enterprise workflows. However, frequent server communication can result in slower interactions.
 
@@ -31,18 +29,16 @@ Certain extensions are added to your application implicitly based on the technol
 
 In essence, JSF is ideal for enterprise systems with server-driven workflows, while Angular excels in creating responsive, modern UIs with high interactivity and scalability. Both can leverage SSR depending on the use case, but their core differences lie in where rendering and logic occur.
 
----
 ## The Application: Raspberry Pi Catalog
 To compare these technologies, I built a simple application that displays a catalog of Raspberry Pi models. Users can filter, sort, and view the models. For simplicity, the app doesn’t include authentication or model editing.
 
 The backend is implemented with Quarkus, and the frontend is developed using JSF (with [PrimeFaces](https://www.primefaces.org/)) and Angular (with [PrimeNG](https://primeng.org/)). Both PrimeFaces and PrimeNG are rich component libraries developed by the same company, making them ideal for this comparison.
 
----
+
 ## How the Application Looks
 The SPA allows users to filter and sort Raspberry Pi models by various criteria. Here’s how the UI looks:
 ![Raspberry Pi Catalog](docs/catalog-service.png)
 
----
 ## Implementing the JSF Application
 A JSF-based application requires a servlet container, and Quarkus supports this through the Undertow servlet container. The backend service, which uses [Panache ORM](https://quarkus.io/guides/hibernate-orm-panache) to access the database, is injected into the JSF managed bean. The frontend leverages the PrimeFaces [DataTable](https://www.primefaces.org/showcase/ui/data/datatable/basic.xhtml) component for listing products, enabling users to filter and sort them effortlessly.
 
@@ -52,7 +48,6 @@ Key advantages of using Quarkus include the ability to run the application as a 
 
 When the user accesses the application URL on port 8080, the catalog page is displayed.
 
----
 ## Implementing the Angular Application
 Angular applications typically run on a [Node.js](https://nodejs.org/) server. Quarkus’s Quinoa extension simplifies this by automatically starting a Node.js server when you run Quarkus in dev mode, serving the Angular app seamlessly.
 
@@ -66,7 +61,6 @@ As with the JSF app, Quarkus’s live coding ensures instant reflection of chang
 
 When the user accesses the application URL on port 8081, the request is routed through Quinoa, which proxies it and forwards the call to the Node.js server. Since the backend is running on Quarkus, the Angular application communicates with the REST API. Alternatively, users can directly access the Angular application on port 4200.
 
----
 ## Choosing Between JSF and Angular
 Both JSF and Angular have their strengths:
 * **JSF**: Best for simple, fast-to-implement applications, particularly in enterprise settings.
@@ -74,7 +68,6 @@ Both JSF and Angular have their strengths:
  
 While JSF offers strong backend integration and simplicity, Angular provides a responsive and dynamic user experience. The choice depends on your project’s specific requirements.
 
----
 ## Conclusion
 Quarkus is an excellent tool for building modern web applications, providing robust support for both JSF and Angular. Its features, such as live coding and seamless integration, make development efficient and enjoyable.
 
