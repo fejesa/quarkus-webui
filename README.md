@@ -1,7 +1,6 @@
 # Comparing Java Server Faces and Angular SPAs on Quarkus
 
 ## Are you a Full Stack Developer?
-
 Do you need to write a Single Page Application (SPA) and are searching for the right tech stack? Are you from a Java or JavaScript background? Lots of questions, I know! But the most important one is: how should you start?
 
 As an experienced Java developer who has also dabbled in TypeScript, I’ve realized that building web applications is not always straightforward. Often, either the backend or frontend uses your preferred stack, and any changes in one can require significant adaptations in the other. The cycle of recompiling, rebuilding, and testing both ends can be repetitive and time-consuming.
@@ -33,7 +32,6 @@ In essence, JSF is ideal for enterprise systems with server-driven workflows, wh
 To compare these technologies, I built a simple application that displays a catalog of Raspberry Pi models. Users can filter, sort, and view the models. For simplicity, the app doesn’t include authentication or model editing.
 
 The backend is implemented with Quarkus, and the frontend is developed using JSF (with [PrimeFaces](https://www.primefaces.org/)) and Angular (with [PrimeNG](https://primeng.org/)). Both PrimeFaces and PrimeNG are rich component libraries developed by the same company, making them ideal for this comparison.
-
 
 ## How the Application Looks
 The SPA allows users to filter and sort Raspberry Pi models by various criteria. Here’s how the UI looks:
