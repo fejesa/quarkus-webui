@@ -7,6 +7,7 @@ import { routes } from './app.routes';
 
 import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeng/themes/aura';
+import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 
 /**
  * Configuration object for the Angular application.
@@ -46,6 +47,6 @@ export const appConfig: ApplicationConfig = {
      * Configures the Angular HTTP client with Fetch API support.
      * - `withFetch()`: Enables the Fetch API for HTTP requests.
      */
-    provideHttpClient(withFetch()),
+    provideHttpClient(withFetch()), provideClientHydration(withEventReplay()),
   ],
 };
