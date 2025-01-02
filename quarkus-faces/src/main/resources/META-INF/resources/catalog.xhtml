@@ -33,8 +33,8 @@
                             <p:graphicImage id="productImage" name="images/#{product.image}" styleClass="product-image" />
                             <p:tooltip for="productImage" value="#{product.description}" position="right"/>
                         </p:column>
-                        <p:column field="processor" headerText="#{msg['processorHeader']}" filterBy="#{product.processor}" sortBy="#{product.processor}">
-                            <h:outputText id="processor" value="#{product.processor}"/>
+                        <p:column field="processor" headerText="#{msg['processorHeader']}" filterBy="#{product.systemOnChip}" filterMatchMode="contains" sortBy="#{product.systemOnChip}">
+                            <h:outputText id="processor" value="#{product.systemOnChip}"/>
                         </p:column>
                         <p:column field="memory" headerText="#{msg['memoryHeader']}" filterBy="#{product.memory}" sortOrder="asc">
                             <h:outputText id="memory" value="#{product.memory}"/>

@@ -12,7 +12,7 @@
           <tr>
             <th><p-columnFilter type="text" field="model" placeholder="Search by model" ariaLabel="Filter Model"></p-columnFilter></th>
             <th>Image</th>
-            <th><p-columnFilter type="text" field="processor" placeholder="Search by processor" ariaLabel="Filter Processor"></p-columnFilter></th>
+            <th><p-columnFilter type="text" field="systemOnChip" placeholder="Search by SoC" ariaLabel="Filter System on Chip (SoC)"></p-columnFilter></th>
             <th pSortableColumn="memory">Memory <p-sortIcon field="memory" /></th>
             <th pSortableColumn="quantity">Quantity <p-sortIcon field="quantity" /></th>
             <th>Status</th>
@@ -22,7 +22,7 @@
           <tr>
             <td>{{ product.model }}</td>
             <td><img [src]="'/assets/images/' + product.image" [alt]="product.name" class="product-image" /></td>
-            <td>{{ product.processor }}</td>
+            <td>{{ product.systemOnChip }}</td>
             <td>{{ product.memory }}</td>
             <td>{{ product.quantity }}</td>
             <td><span [class]="'product-badge status-' +product.status.toLowerCase()">{{product.status}}</span></td>

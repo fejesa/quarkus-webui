@@ -13,8 +13,8 @@ public class Product {
     @Column(name = "model", updatable = false, nullable = false, length = 255)
     private String model;
 
-    @Column(name = "processor", updatable = false, nullable = false, length = 255)
-    private String processor;
+    @Column(name = "soc", updatable = false, nullable = false, length = 255)
+    private String systemOnChip;
 
     @Column(name = "memory", updatable = false, nullable = false, length = 255)
     private String memory;
@@ -48,12 +48,12 @@ public class Product {
         this.model = model;
     }
 
-    public String getProcessor() {
-        return processor;
+    public String getSystemOnChip() {
+        return systemOnChip;
     }
 
-    public void setProcessor(String processor) {
-        this.processor = processor;
+    public void setSystemOnChip(String processor) {
+        this.systemOnChip = processor;
     }
 
     public String getMemory() {

@@ -10,7 +10,7 @@ components:
           format: int64
         model:
           type: string
-        processor:
+        systemOnChip:
           type: string
         memory:
           type: string

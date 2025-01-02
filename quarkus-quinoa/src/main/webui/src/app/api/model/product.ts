@@ -12,7 +12,7 @@ export interface Product {
   image?: string;
   memory?: string;
   model?: string;
-  processor?: string;
   quantity?: number;
   status?: ProductStatus;
+  systemOnChip?: string;
 }

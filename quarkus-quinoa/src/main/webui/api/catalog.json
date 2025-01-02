@@ -12,7 +12,7 @@
           "model" : {
             "type" : "string"
           },
-          "processor" : {
+          "systemOnChip" : {
             "type" : "string"
           },
           "memory" : {
