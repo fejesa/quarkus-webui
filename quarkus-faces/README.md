@@ -1,4 +1,4 @@
-# Quarkus PrimeFaces UI
+# Quarkus Faces UI
 
 This project demonstrates how to use [PrimeFaces](https://www.primefaces.org/) UI components in a [Quarkus](https://quarkus.io/) application. It is a Single Page Application (SPA) that displays a catalog of products with PrimeFaces UI components.
 
