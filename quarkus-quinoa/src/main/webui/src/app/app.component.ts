@@ -1,7 +1,7 @@
 import {RouterOutlet} from '@angular/router';
 import {Component, OnInit} from '@angular/core';
 import {Product} from './api/model';
-import {QuarkusQuinoaAPIService} from './api/service/catalog.service';
+import {ProductAPIService} from './api/service/catalog.service';
 import {TableModule} from 'primeng/table';
 import {TagModule} from 'primeng/tag';
 import {CommonModule} from '@angular/common';
@@ -20,7 +20,7 @@ import {CommonModule} from '@angular/common';
     TagModule // PrimeNG module for rendering tags/labels.
   ],
   providers: [
-    QuarkusQuinoaAPIService // Service for fetching product data from the backend.
+    ProductAPIService // Service for fetching product data from the backend.
   ],
   templateUrl: './app.component.html', // Path to the component's HTML template.
   styleUrl: './app.component.scss' // Path to the component's SCSS styles.
@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
    * Initializes the component and injects the catalog service.
    * @param catalogService The service for accessing the product API.
    */
-  constructor(private catalogService: QuarkusQuinoaAPIService) {
+  constructor(private catalogService: ProductAPIService) {
   }
 
   /**

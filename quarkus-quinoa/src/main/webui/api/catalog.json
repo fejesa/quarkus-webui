@@ -70,7 +70,7 @@
     "description" : "Auto-added by management interface"
   } ],
   "info" : {
-    "title" : "quarkus-quinoa API",
+    "title" : "ProductAPI",
     "version" : "1.0.0"
   }
 }

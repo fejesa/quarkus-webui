@@ -50,5 +50,5 @@ servers:
 - url: http://0.0.0.0:8081
   description: Auto-added by management interface
 info:
-  title: quarkus-quinoa API
+  title: ProductAPI
   version: 1.0.0

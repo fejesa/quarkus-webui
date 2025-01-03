@@ -57,6 +57,8 @@ The application ports and database connection properties are configured in the `
 quarkus.rest.path = /api
 # Name of the generated OpenAPI schema files; defaults are openapi.json and openapi.yaml
 quarkus.smallrye-openapi.store-schema-file-name = catalog
+# The title of the generated OpenAPI schema document. This title is used in the generated OpenAPI service.
+quarkus.smallrye-openapi.info-title = ProductAPI
 # Directory where the generated OpenAPI schema files are stored during the build
 quarkus.smallrye-openapi.store-schema-directory = src/main/webui/api
 # Enables package manager installation, overriding the "package-manager" configuration
