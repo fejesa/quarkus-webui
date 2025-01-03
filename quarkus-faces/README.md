@@ -13,8 +13,6 @@ This project demonstrates how to use [PrimeFaces](https://www.primefaces.org/) U
   * Holds the products and filters.
   * Handles user interactions such as filtering and sorting.
   * Delegates calls to the backend service.
-
-### Layout
 * The layout - `catalog.xhtml` - consists of a simple header and a content area, defined in an XHTML file.
 * Based on the [PrimeFaces Quarkus](https://github.com/quarkiverse/quarkus-primefaces) extension, web resources are served from the `src/main/resources/META-INF/resources` folder.
 * The `src/main/resources/META-INF/web.xml` file defines mappings between URL paths and the servlets handling requests.
@@ -22,7 +20,7 @@ This project demonstrates how to use [PrimeFaces](https://www.primefaces.org/) U
 ### Database
 * The application uses PostgreSQL as its database.
 * Database connection properties are configured in the `application.properties` file.
-* During startup, the database is created and populated with sample products using the `import.sql` file.
+* During startup, the database is created and populated with sample products using the `import.sql` file (thanks for Hibernate).
 
 **Note:** Product images are stored in the `src/main/resources/META-INF/resources/images` folder for this demo. In a production environment, images should be stored in a more appropriate location, such as a dedicated file storage service or CDN.
 

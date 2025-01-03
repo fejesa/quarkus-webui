@@ -23,7 +23,7 @@ Key files:
 ### Database
 * The application uses PostgreSQL as its database.
 * Database connection properties are configured in the `application.properties` file.
-* During startup, the database is created and populated with sample products using the `import.sql` file.
+* During startup, the database is created and populated with sample products using the `import.sql` file (thanks for Hibernate).
 
 **Note:** Product images are stored in the `src/main/resources/META-INF/resources/images` folder for this demo. In a production environment, images should be stored in a more appropriate location, such as a dedicated file storage service or CDN.
 
