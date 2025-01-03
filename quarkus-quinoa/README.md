@@ -31,6 +31,7 @@ Key files:
 To build and run this project, you need the following tools:
 - **Java 21**
 - **Maven 3**
+- **Docker**
 
 **Note**: no need to install [Node.js](https://nodejs.org/) or Angular CLI, as the Quinoa extension downloads and installs them automatically.
 

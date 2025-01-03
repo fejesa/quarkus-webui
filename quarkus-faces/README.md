@@ -30,6 +30,7 @@ This project demonstrates how to use [PrimeFaces](https://www.primefaces.org/) U
 To build and run this project, you need the following tools:
 - **Java 21**
 - **Maven 3**
+- **Docker**
 
 ## Building and Running the Application
 Follow these steps to build and run the application locally:
