@@ -62,11 +62,11 @@ When the user accesses the application URL on port 8081, the request is routed t
 When a REST API is called, it is served by Quarkus’s REST extension, regardless of whether it is accessed directly by the user or by the Angular application.
 
 ## Choosing Between JSF and Angular
-Both JSF and Angular have their strengths:
-* **JSF**: Best for simple, fast-to-implement applications, particularly in enterprise settings.
-* **Angular**: Ideal for modern, highly interactive, and scalable applications.
- 
-While JSF offers strong backend integration and simplicity, Angular provides a responsive and dynamic user experience. The choice depends on your project’s specific requirements.
+Both JSF and Angular have their strengths, making them suitable for different use cases:
+* **JSF**: Best for simple, fast-to-implement applications, particularly in enterprise settings. Developers with a Java background will appreciate JSF's seamless integration with Quarkus. Combined with over 100 pre-built components provided by PrimeFaces, JSF enables the rapid development of responsive and accessible web applications.
+* **Angular**: Ideal for modern, highly interactive, and scalable applications. It excels in creating dynamic single-page applications (SPAs) with rich user experiences.
+
+While JSF offers strong backend integration, simplicity, and ease of use for Java developers, Angular provides a more responsive and dynamic user experience suited for modern web development. The choice between the two ultimately depends on your project’s specific requirements and goals.
 
 ## Conclusion
 Quarkus is an excellent tool for building modern web applications, providing robust support for both JSF and Angular. Its features, such as live coding and seamless integration, make development efficient and enjoyable.
