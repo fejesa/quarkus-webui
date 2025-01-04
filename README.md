@@ -42,7 +42,7 @@ A JSF-based application requires a servlet container, and Quarkus supports this 
 
 Key advantages of using Quarkus include the ability to run the application as a standalone JAR file—no need for a traditional WAR file deployment. Moreover, during development, Quarkus’s live coding feature ensures that changes are reflected immediately without restarting the application.
 
-![JSF Application Architecture](docs/catalog-jsf.png)
+![JSF Application Architecture](docs/catalog-faces.png)
 
 When the user accesses the application URL on port 8080, the catalog page is displayed.
 
@@ -58,6 +58,8 @@ As with the JSF app, Quarkus’s live coding ensures instant reflection of chang
 ![Angular Application Architecture](docs/catalog-angular.png)
 
 When the user accesses the application URL on port 8081, the request is routed through Quinoa, which proxies it and forwards the call to the Node.js server. Since the backend is running on Quarkus, the Angular application communicates with the REST API. Alternatively, users can directly access the Angular application on port 4200.
+
+When a REST API is called, it is served by Quarkus’s REST extension, regardless of whether it is accessed directly by the user or by the Angular application.
 
 ## Choosing Between JSF and Angular
 Both JSF and Angular have their strengths:
